@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <!-- <script src="../js/phaser.min.js"></script> -->
+    <css>~~~</css>
 </head>
 
 <body>
@@ -23,10 +24,10 @@
             create() {
                 //  A background image - scrolls with the camera at a 1:1 ratio
                 this.add.image(400, 300, 'background');
-
+                
                 //  A sprite, scrolls at half the speed of the camera
                 this.add.image(400, 300, 'aim').setScrollFactor(0.50);
-
+                
                 //  A sprite, scrolls at quarter the speed of the camera
                 this.add.image(400, 300, 'aim').setScrollFactor(0.25);
 
@@ -37,10 +38,10 @@
 
                 const cursors = this.input.keyboard.createCursorKeys();
 
-                const controlConfig = {
+                const controlConfig = {             // 
                     camera: this.cameras.main,
                     left: cursors.left,
-                    right: cursors.right,
+                    right: cursors.right,           // 글? 정보 설정 내용
                     up: cursors.up,
                     down: cursors.down,
                     acceleration: 0.06,
@@ -58,7 +59,7 @@
                     line1: 'Cursors to move'
                 }
 
-                var f1 = gui.addFolder('Camera');
+                var f1 = gui.addFolder('Camera');  // 카메라 어떤 방식으로 움직이는가
                 f1.add(cam, 'x').listen();
                 f1.add(cam, 'y').listen();
                 f1.add(cam, 'scrollX').listen();
@@ -85,7 +86,11 @@
         const game = new Phaser.Game(config);
 
     </script>
-
+    
+    ?
+    
 </body>
+    
+    
 
 </html>
